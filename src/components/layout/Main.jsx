@@ -11,7 +11,7 @@ const styles = css`
   padding: 20px 0;
   display: flex;
   justify-content: center;
-  background-color: #1d1d1d;
+  background-color: #110f13;
 `
 
 export default function Main() {

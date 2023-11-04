@@ -16,7 +16,7 @@ const styles = css`
 
   .sign {
     font-size: 0.7rem;
-    background: linear-gradient(to right, #5a20a5, #c718a1);
+    background: linear-gradient(to right, #4785e2, #c718a1);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
   }

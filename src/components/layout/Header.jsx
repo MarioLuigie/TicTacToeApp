@@ -13,7 +13,7 @@ const styles = css`
   justify-content: center;
   align-items: center;
   box-shadow: #0000003d 0 5px 18px;
-  background-color: #131313;
+  background-color: #110f13;
 
   .title {
     font-size: 3.2rem;
@@ -25,6 +25,10 @@ const styles = css`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
+    span {
+      font-weight: 100;
+    }
+
     @media screen and (min-width: 540px) {
       font-size: 4.8rem;
     }
@@ -35,7 +39,7 @@ export default function Header({ title }) {
 
   return (
     <header css={styles}>
-      <h1 className='title'>{title} &reg;</h1>
+      <h1 className='title'>{title} <span>&reg;</span></h1>
     </header>
   )
 }
