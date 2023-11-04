@@ -19,15 +19,9 @@ export default function GameContainer() {
 
   return (
     <div css={styles}>
-      <Card>
-        <ControlPanel />
-      </Card>
-      <Card>
-        <Board />
-      </Card>
-      <Card>
-        <History />
-      </Card>
+      <Card><ControlPanel /></Card>
+      <Card><Board /></Card>
+      <Card><History /></Card>
     </div>
   )
 }

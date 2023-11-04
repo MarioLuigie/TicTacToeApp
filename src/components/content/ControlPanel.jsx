@@ -35,8 +35,18 @@ export default function ControlPanel() {
   return (
     <div css={styles}>
       <ol className='playerList'>
-        <Player id={"playerX"} name={"Maksimilian"} symbol={playerX} onHandle={() => {}}/>
-        <Player id={"playerO"} name={"Klaudia"} symbol={playerO} onHandle={() => {}}/>
+        <Player 
+          id={"playerX"} 
+          name={"Maks"} 
+          symbol={playerX} 
+          onHandle={() => {}}
+        />
+        <Player 
+          id={"playerO"} 
+          name={"Klaudia"} 
+          symbol={playerO} 
+          onHandle={() => {}}
+        />
       </ol>
     </div>
   )
