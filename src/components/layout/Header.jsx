@@ -4,7 +4,6 @@ import { css } from '@emotion/react';
 import PropTypes from "prop-types";
 
 import { header } from "../../constants/dimensions.js";
-import colors from "../../constants/colors.js";
 
 const styles = css`
   width: ${header.width}%;
@@ -13,16 +12,15 @@ const styles = css`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: ${colors.line} solid 1px;
   box-shadow: #0000003d 0 5px 18px;
+  background-color: #131313;
 
   .title {
     font-size: 3.2rem;
     background: linear-gradient(
       to right, 
-      #193181, 
-      #d31eac, 
-      orange
+      #185dad, 
+      #d31eac
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

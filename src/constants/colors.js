@@ -1,5 +1,5 @@
 const colors = {
-  line: "#cccccc",
+  line: "#030fcc",
 }
 
 export default colors;

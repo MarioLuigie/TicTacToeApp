@@ -9,9 +9,12 @@ import History from "../content/History.jsx";
 
 const styles = css`
   width: 100%;
+  max-width: 690px;
   aspect-ratio: 1;
-  background-color: red;
-
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `
 
 export default function GameContainer() {

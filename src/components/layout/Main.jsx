@@ -8,9 +8,10 @@ import GameContainer from "../content/GameContainer.jsx";
 const styles = css`
   width: ${main.width}%;
   min-height: calc(100vh - ${header.height + footer.height}px);
+  padding: 20px 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  background-color: #1d1d1d;
 `
 
 export default function Main() {
