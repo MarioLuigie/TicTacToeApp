@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(209, 209, 209);
+  background-color: #02080f;   
+  background: linear-gradient(to top, rgb(3, 3, 3), #010411, #120216);
+}
