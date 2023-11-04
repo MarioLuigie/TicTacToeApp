@@ -22,21 +22,21 @@ const styles = css`
     align-items: center;
     gap: 10px;
 
-    @media screen and (min-width: 540px) {
+    @media screen and (min-width: 1100px) {
       flex-direction: row;
     }
   }
 `
 
 export default function ControlPanel() {
-  const xPlayer = <FontAwesomeIcon icon={faXmark} />
-  const oPlayer = <FontAwesomeIcon icon={faCircleNotch} />
+  const playerX = <FontAwesomeIcon icon={faXmark} />
+  const playerO = <FontAwesomeIcon icon={faCircleNotch} />
 
   return (
     <div css={styles}>
       <ol className='playerList'>
-        <Player name={"Peter"} symbol={xPlayer} onHandle={() => {}}/>
-        <Player name={"Bruce"} symbol={oPlayer} onHandle={() => {}}/>
+        <Player id={"playerX"} name={"Maksimilian"} symbol={playerX} onHandle={() => {}}/>
+        <Player id={"playerO"} name={"Klaudia"} symbol={playerO} onHandle={() => {}}/>
       </ol>
     </div>
   )

@@ -9,8 +9,6 @@ import History from "../content/History.jsx";
 
 const styles = css`
   width: 100%;
-  max-width: 690px;
-  aspect-ratio: 1;
   padding: 20px;
   display: flex;
   flex-direction: column;

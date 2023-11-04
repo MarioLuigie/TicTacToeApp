@@ -1,7 +1,7 @@
 export const container = {
   width: 100,
   minWidth: 360,
-  maxWidth: 750
+  maxWidth: 1200
 }
 
 export const header = {
