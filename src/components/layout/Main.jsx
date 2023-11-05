@@ -11,7 +11,7 @@ const styles = css`
   padding: 20px 0;
   display: flex;
   justify-content: center;
-  background-color: #110f13;
+  background: linear-gradient(to top,#131313, rgb(12, 12, 12), #1b121d, #07080e, #110f13);
 `
 
 export default function Main() {

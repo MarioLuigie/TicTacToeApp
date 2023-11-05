@@ -11,7 +11,6 @@ const styles = css`
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: #0000003d 0 -5px 18px;
   background-color: #131313;
 
   .sign {

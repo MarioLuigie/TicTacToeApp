@@ -14,7 +14,6 @@ const styles = css`
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: #00000052 0 0 30px;
 
   @media screen and (min-width: 780px) {
     width: 75%;

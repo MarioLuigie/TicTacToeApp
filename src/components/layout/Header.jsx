@@ -12,8 +12,8 @@ const styles = css`
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: #0000003d 0 5px 18px;
   background-color: #110f13;
+  background: linear-gradient(to top, #110f13, #07080e);
 
   .title {
     font-size: 3.2rem;

@@ -9,13 +9,19 @@ import Player from "./Player.jsx";
 const styles = css`
   width: 100%;
   min-height: 100px;
+  padding: 15px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
+  .label {
+    padding-bottom: 20px;
+    color: #474747;
+  }
+
   .playerList {
     width: 100%;
-    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,18 +40,17 @@ export default function ControlPanel() {
 
   return (
     <div css={styles}>
+      <p className='label'>Settings Panel</p>
       <ol className='playerList'>
         <Player 
           id={"playerX"} 
           name={"Maks"} 
           symbol={playerX} 
-          onHandle={() => {}}
         />
         <Player 
           id={"playerO"} 
           name={"Klaudia"} 
           symbol={playerO} 
-          onHandle={() => {}}
         />
       </ol>
     </div>

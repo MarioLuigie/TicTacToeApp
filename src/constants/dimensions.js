@@ -6,7 +6,7 @@ export const container = {
 
 export const header = {
   width: 100,
-  height: 150
+  height: 170
 }
 
 export const main = {
