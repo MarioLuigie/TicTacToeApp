@@ -44,12 +44,12 @@ export default function ControlPanel() {
       <ol className='playerList'>
         <Player 
           id={"playerX"} 
-          name={"Maks"} 
+          name={"Player"} 
           symbol={playerX} 
         />
         <Player 
           id={"playerO"} 
-          name={"Klaudia"} 
+          name={"Player"} 
           symbol={playerO} 
         />
       </ol>

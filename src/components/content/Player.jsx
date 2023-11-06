@@ -1,12 +1,12 @@
 /* eslint-disable react/no-unknown-property */
 // /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons';
 
-const styles = (id) => css`
+const styles = (id, isEdit) => css`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -22,7 +22,7 @@ const styles = (id) => css`
     font-size: 1.5rem;
     display: flex;
     justify-content: flex-end;
-    color: #585858;
+    color: #666666;
   }
 
   .playerSymbol {
@@ -52,11 +52,12 @@ const styles = (id) => css`
     border-radius: 3px;
     cursor: pointer;
     background-color: #202020;
-    color: #414141;
+    color: ${isEdit ? "#694eb3" : "#4b4b4b"};
     box-shadow: #000000ae 0 0 8px;
 
     &:hover {
-      color: #694eb3;
+      background-color: #292929;
+      color: #888888;
     }
   }
 
@@ -79,33 +80,59 @@ const styles = (id) => css`
     width: 40%;
     font-size: 1.5rem;
     padding: 7px 12px;
-    color: #757575;
+    color: #292929;
     background-color: #111111;
-    border: #252525 solid 1px;
+    border: #1a1a1a solid 2px;
     border-radius: 6px;
+    caret-color: #7a7a7a;
+
+    &::placeholder {
+      color: #252525;
+    }
   }
 `
 
 export default function Player({ id, name, symbol }) {
   const [isEdit, setIsEdit] = useState(false);
+  const [playerName, setPlayerName] = useState(name);
+  const [playerNameInput, setPlayerNameInput] = useState(playerName);
+  const inputNameRef = useRef(null);
+
+  useEffect(() => {
+    if(isEdit && inputNameRef) {
+      inputNameRef.current.focus();
+    }
+  }, [isEdit]);
+
+  const handleChangeInput = (evt) => {
+    setPlayerNameInput(evt.target.value);
+  }
 
   const handleEdit = () => {
     setIsEdit(true);
   }
 
   const handleApply = () => {
+    setPlayerName(playerNameInput);
     setIsEdit(false);
   }
 
   const handleCancel = () => {
+    setPlayerName(prevName => prevName);
+    setPlayerNameInput(playerName);
     setIsEdit(false);
   }
 
   return (
-    <li css={styles(id)}>
-      {isEdit
-        ? <input/>
-        : <p className='playerName'>{name}</p>
+    <li css={styles(id, isEdit)}>
+      {isEdit ? 
+        (<input 
+          type="text" 
+          ref={inputNameRef} 
+          value={playerNameInput} 
+          onChange={handleChangeInput} 
+          required
+        />) : (<p className='playerName'>{playerName}</p>)
       }
       <div className='playerSymbol'>{symbol}</div>
       <div className='buttons'>

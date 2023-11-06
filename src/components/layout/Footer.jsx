@@ -26,7 +26,7 @@ export default function Footer({ sign }) {
 
   return (
     <footer css={styles}>
-      <p className='sign'>{sign}</p>
+      <p className='sign'>{sign} &copy;</p>
     </footer>
   )
 }
